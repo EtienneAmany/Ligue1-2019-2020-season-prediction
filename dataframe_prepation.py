@@ -164,10 +164,7 @@ for col in cols_away:
             df1.loc[team, ft1] = x1[col].sum()
             df1.loc[team, ft2] = x1[col].mean()
 
-df_test = pd.DataFrame(index = [1], columns=['HomeTeam', 'AwayTeam'])
 
-df_test.loc[1,'HomeTeam'] = 'Lyon'
-df_test.loc[1,'AwayTeam'] = 'Grenoble'
 
 
 
@@ -202,6 +199,9 @@ away = ['away_wins', 'away_losses',
 
 df1_home = df1[home]
 df1_away = df1[away]
+
+df1_home.to_csv('data/df1_home.csv')
+df1_away.to_csv('data/df1_away.csv')
 
 df_final = df.copy()
 
